@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>کافه پرواز</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <img id="logoPreview" class="logo" />
+  <h1>کافه پرواز</h1>
+  <h3>شرکت هوانوردی عقاب آسمان شمال</h3>
+</header>
+
+<!-- دسته بندی -->
+<div class="categories">
+  <button onclick="filter('all')">همه</button>
+  <button onclick="filter('گرم')">نوشیدنی گرم قهوه</button>
+  <button onclick="filter('سرد')">نوشیدنی سرد قهوه</button>
+  <button onclick="filter('شرکتی')">نوشیدنی شرکتی</button>
+  <button onclick="filter('تنقلات')">تنقلات</button>
+  <button onclick="filter('غذا')">غذای حاضری</button>
+  <button onclick="filter('سایر')">سایر</button>
+</div>
+
+<!-- منو -->
+<div id="menu"></div>
+
+<!-- ویدیو -->
+<div class="videoBox">
+  <video id="adVideo" controls></video>
+</div>
+
+<!-- پنل ادمین -->
+<div class="admin">
+  <button onclick="openAdmin()">پنل مدیریت</button>
+</div>
+
+<div id="adminPanel" class="panel hidden">
+  <h2>پنل مدیریت</h2>
+
+  <input id="name" placeholder="نام محصول">
+  <input id="price" placeholder="قیمت">
+
+  <select id="category">
+    <option>گرم</option>
+    <option>سرد</option>
+    <option>شرکتی</option>
+    <option>تنقلات</option>
+    <option>غذا</option>
+    <option>سایر</option>
+  </select>
+
+  <input type="file" accept="image/jpeg" id="image">
+  <input type="file" accept="video/mp4" id="video">
+  <input type="file" accept="image/jpeg" id="logo">
+
+  <button onclick="saveProduct()">ثبت محصول</button>
+  <button onclick="saveMedia()">ثبت رسانه</button>
+  <button onclick="closeAdmin()">بستن</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
